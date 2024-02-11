@@ -1,0 +1,173 @@
+/* Common styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+  .ec-main-div {
+    width: 90%;
+    height: auto;
+    margin: 3em auto;
+  }
+
+  .ec-text {
+    font-size: 2em;
+  }
+
+  .fc-main-div {
+    width: 90%;
+    margin: auto;
+
+    .cart-item-card {
+      img {
+        height: 10em;
+        margin-bottom: 1em;
+      }
+
+      .cart-item-details {
+        text-align: center;
+
+        .cart-item-name {
+          font-size: 1.2em;
+        }
+
+        .cart-item-price {
+          float: none;
+          text-align: center;
+
+          span {
+            font-size: 1.2em;
+          }
+        }
+
+        span {
+          font-weight: 600;
+          font-size: medium;
+        }
+      }
+    }
+
+    .cart-summary {
+      border-radius: 1em;
+      text-align: center;
+      border-radius: 2em;
+      background-color: aliceblue;
+
+      span {
+        display: block;
+        margin: 1em 0;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      .summary-total {
+        font-weight: 550;
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .field-margin {
+    margin-bottom: 0.5em;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+
+  .fa-trash {
+    font-size: 18px;
+  }
+
+  /* Adjust the size of the Remove Item button */
+  .remove-item-button {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+}
+
+/* Web styles */
+@media only screen and (min-width: 601px) {
+  .ec-main-div {
+    width: 70%;
+    height: 15em;
+    margin: 3em auto;
+  }
+
+  .ec-text {
+    font-size: 3em;
+  }
+
+  .fc-main-div {
+    width: 70%;
+    margin: auto;
+
+    .cart-item-card {
+      img {
+        height: 13em;
+        margin-bottom: 1em;
+      }
+
+      .cart-item-details {
+        text-align: left;
+
+        .cart-item-name {
+          font-size: 1.4em;
+        }
+
+        .cart-item-price {
+          float: right;
+
+          span {
+            font-size: 1.5em;
+          }
+        }
+
+        span {
+          font-weight: 600;
+          font-size: large;
+        }
+      }
+
+    }
+
+    .cart-summary {
+      border-radius: 2em;
+      background-color: aliceblue;
+      text-align: start;
+
+      span {
+        display: block;
+        color: rgb(78, 78, 78);
+        margin: 1em 0;
+      }
+
+      h2 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .summary-total {
+        color: black;
+        font-weight: 550;
+      }
+    }
+  }
+
+  .field-margin {
+    margin-bottom: 1em;
+  }
+
+  .submit-button {
+    width: auto;
+  }
+}
+
+.submit-button:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
