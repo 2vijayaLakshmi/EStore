@@ -3,8 +3,6 @@ import {IconDefinition,faStar} from '@fortawesome/free-solid-svg-icons';
 import {faStar as faStarEmpty,faStarHalfStroke} from '@fortawesome/free-regular-svg-icons'
 
 
-faStar;
-
 @Component({
   selector: 'app-ratings',
   templateUrl: './ratings.component.html',

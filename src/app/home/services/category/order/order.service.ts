@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { CartStoreItem } from '../cart/cart.storeItem';
 import { DeliveryAddress } from './../../../types/cart.type';
 import { UserService } from '../users/user-service.service';
+import { environment } from 'src/environments/environment.prod';
 
 
 @Injectable()
@@ -19,7 +20,7 @@ export class OrderService {
     deliveryAddress: DeliveryAddress,
     userEmail: string
   ): Observable<any> {
-    const url: string = 'http://localhost:5001/orders/add';
+    const url: string = `${environment.PROURL}/orders/add`;
     const orderDetails: OrderItem[] = [];
     this.cartStore.cart.products.forEach((product) => {
       const orderItem: OrderItem = {

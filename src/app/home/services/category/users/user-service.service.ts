@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { loggedInUser, loginToken, user } from 'src/app/home/types/user.type';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable()
 export class UserService {
@@ -37,12 +38,12 @@ export class UserService {
   }
 
   createUser(user: user): Observable<any> {
-    const url: string = 'http://localhost:5001/users/signup';
+    const url: string = `${environment.PROURL}/users/signup`;
     return this.httpClient.post(url, user);
   }
 
   login(email: string, password: string): Observable<any> {
-    const url: string = 'http://localhost:5001/users/login';
+    const url: string = `${environment.PROURL}/users/login`;
     return this.httpClient.post(url, { email: email, password: password });
   }
 
