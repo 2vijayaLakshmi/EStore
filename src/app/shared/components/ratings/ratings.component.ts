@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {IconDefinition,faStar} from '@fortawesome/free-solid-svg-icons';
-import {faStar as faStarEmpty,faStarHalfStroke} from '@fortawesome/free-regular-svg-icons'
+// import {faStar as faStarEmpty,faStarHalfStroke} from '@fortawesome/free-regular-svg-icons';
+import {faStar as faStarEmpty} from '@fortawesome/free-regular-svg-icons';
 
 
 @Component({
@@ -10,7 +11,7 @@ import {faStar as faStarEmpty,faStarHalfStroke} from '@fortawesome/free-regular-
 })
 export class RatingsComponent implements OnInit {
   faStar = faStar;
-  faStarHalfStroke = faStarHalfStroke;
+  // faStarHalfStroke = faStarHalfStroke;
   faStarEmpty = faStarEmpty;
 
   stars: IconDefinition[] = [];
@@ -24,9 +25,9 @@ export class RatingsComponent implements OnInit {
         this.stars.push(faStar);
     }
 
-    if(this._score-solidStarCount > 0 && this._score - solidStarCount < 1){
-      this.stars.push(faStarHalfStroke)
-    }
+    // if(this._score-solidStarCount > 0 && this._score - solidStarCount < 1){
+    //   this.stars.push(faStarHalfStroke)
+    // }
 
     for(let i = this.stars.length; i<5;i++){
       this.stars.push(faStarEmpty);
